@@ -6,10 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+<<<<<<< HEAD
+=======
+    /**
+     * Run the migrations.
+     */
+>>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('email', 100)->unique();
             $table->string('password');
             $table->string('name', 150);
@@ -22,6 +29,14 @@ return new class extends Migration
             
             $table->index('role');
             $table->index('instansi_id');
+=======
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+>>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -40,6 +55,7 @@ return new class extends Migration
         });
     }
 
+<<<<<<< HEAD
     public function down(): void
     {
         Schema::dropIfExists('sessions');
@@ -47,3 +63,15 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+=======
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('sessions');
+    }
+};
+>>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
