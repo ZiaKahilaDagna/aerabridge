@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /.phpunit.cache
 =======
 *.log
@@ -8,39 +8,31 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+
 /.fleet
 /.idea
 /.nova
 /.phpunit.cache
 /.vscode
 /.zed
+
 /auth.json
->>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
+
 /node_modules
 /public/build
 /public/hot
 /public/storage
+
 /storage/*.key
 /storage/pail
+
 /vendor
-<<<<<<< HEAD
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
+
 Homestead.json
 Homestead.yaml
+
 npm-debug.log
 yarn-error.log
-/auth.json
-/.fleet
-/.idea
-/.nova
-/.vscode
-/.zed
-=======
-Homestead.json
-Homestead.yaml
+
 Thumbs.db
->>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
+

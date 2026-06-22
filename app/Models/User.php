@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-<<<<<<< HEAD
+
 use App\Models\Instansi;
 use App\Models\Report;
 use App\Models\ReportVerification;
@@ -26,41 +26,13 @@ class User extends Authenticatable
         'is_active',
     ];
 
-=======
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
-{
-    /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
->>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-<<<<<<< HEAD
+
     public function instansi()
     {
         return $this->belongsTo(Instansi::class, 'instansi_id');
@@ -111,18 +83,3 @@ class User extends Authenticatable
         return $this->hasMany(Configuration::class, 'updated_by');
     }
 }
-=======
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
-}
->>>>>>> e7931bbbacd40f92ce42736210fc5eb200712355
